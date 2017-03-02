@@ -14,7 +14,7 @@ const fetchGood = (type, dispatch) => {
         sessionStorage[type] = JSON.stringify(goods);
         dispatch({
             type: FETCH_GOOD,
-            payload: goods
+            payload: { goods, qryType: type }
         })
     })
 }

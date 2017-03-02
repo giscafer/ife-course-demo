@@ -8,7 +8,7 @@ import goodAction from '../actions/goods'
 class GoodContent extends Component{
     componentWillMount(){
         const {queryList} = this.props;
-        queryList('XIAOWEI')
+        queryList('XIAOWEI');
     }
 
     render(){

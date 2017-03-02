@@ -6,8 +6,8 @@ import Footer from '../components/common/footer/Footer';
 import Jumbotron from '../components/goods/Jumbotron';
 import GoodContent from './GoodContent';
 
-class App extends Component {
 
+class App extends Component {
     render() {
         return (
             <div className="App">

@@ -1,12 +1,13 @@
 footer {
     background-color: #333;
     color: #fff;
-    height: 100px;
+    height: 60px;
     font-size: 14px;
+    position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
-    line-height: 40px;
+    line-height: 30px;
 }
 
 .footer::before {
@@ -30,7 +31,7 @@ footer {
 
 .footer li {
     margin: 0 0.5em 0 0.5em;
-    color: #999
+    color: #999999;
 }
 
 .footer li > a {
