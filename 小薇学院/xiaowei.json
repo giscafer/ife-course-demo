@@ -1,0 +1,12 @@
+[
+  {
+    "name": "任务一：零基础HTML编码",
+    "description":"完成一个HTML页面代码编写（不写CSS，不需要关注样式，只关注文档结构）",
+    "img": "https://raw.githubusercontent.com/giscafer/ife-course-demo/master/小薇学院/xiaowei.jpg"
+  },
+  {
+    "name": "任务二：零基础HTML及CSS编码（一）",
+    "description":"完成一个HTML页面代码编写（不写CSS，不需要关注样式，只关注文档结构）",
+    "img": "https://raw.githubusercontent.com/giscafer/ife-course-demo/master/小薇学院/xiaowei.jpg"
+  }
+]
