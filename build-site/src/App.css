@@ -12,15 +12,22 @@
 }
 
 .App-header {
+  position: absolute;
   background: linear-gradient(90deg,#1192b9 10%,#a0d7f6 90%);
   height: 150px;
-  padding: 20px;
+  padding:20px 0;
+  width: 100%;
   color: white;
 }
 
 .App-nav {
   font-size: large;
   margin-top:1em
+}
+@media screen and(max-width: 479px) {
+  /*.App-header {
+    width: auto;
+  }*/
 }
 
 @keyframes App-logo-spin {

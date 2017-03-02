@@ -10,6 +10,7 @@ export default ({onFilterClick,filterType}) => {
                     </ul>
                 </div>
                 <div id="bs-navbar" className="navbar-collapse collapse">
+                    <span className="btn">菜单</span>
                     <ul className="nav navbar-nav">
                         <li className={ filterType === 'XIAOWEI' ? 'selected' : '' }><span onClick={() => onFilterClick('XIAOWEI')}>小薇学院</span></li>
                         <li className={ filterType === 'BINBIN' ? 'selected' : '' }><span onClick={() => onFilterClick('BINBIN')}>斌斌学院</span></li>

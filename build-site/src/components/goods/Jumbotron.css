@@ -54,7 +54,6 @@
 
 @media screen and (max-width:479px){
     #add-good input{
-        width: 60%;
         height: 1.4em;
         border: 1px solid #d5d5d5;
         border-right: none;
@@ -63,20 +62,16 @@
         margin-left:1em;
         outline: none
     }
-    #add-good button {
-        border: 1px solid #d5d5d5;
-        padding-left: 1em;
-        text-decoration: none;
-        border-radius: 0 2em 2em 0;
+    .btn {
+        padding: 0.2em 1em;
         line-height:1em;
-        padding-right: 1em
     }
 
     .input-group-btn>.btn {
         position: relative;
         height: 2em
     }
-    #add-good h4 {
+    #add-good h2{
         font-size: 1.2em;
     }
 }

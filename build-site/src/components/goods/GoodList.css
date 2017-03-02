@@ -1,11 +1,14 @@
 .main-container {
+    position: absolute;
     margin:5px auto;
+    margin-bottom: 80px;
+    margin-top:200px;
 }
 .good-column{
     display: -webkit-flex; /* Safari */
     display: flex;
-    -webkit-justify-content:flex-start;
-    -moz-justify-content:flex-start;
+    -webkit-justify-content:center;
+    -moz-justify-content:center;
     justify-content:center;
     /*    flex-direction:column;
         -webkit-flex-direction:column;
@@ -54,8 +57,6 @@
    height:13em;
    overflow: hidden;
    margin-left: 10%;
-
-
 }
 .good-column .good .icon img{
     width: 22em;
@@ -71,17 +72,29 @@
 
 @media screen and (max-width:479px){
     .good-column{
-        -webkit-justify-content:space-around;
-        -moz-justify-content:space-around;
-        justify-content:space-around;
+        -webkit-justify-content:center;
+        -moz-justify-content:center;
+        justify-content:center;
         margin:1em 0.53em 2em 0.3em;
 
     }
     .good-column .good{
-        width: 4em;
-        padding: 1em 1em;
+        position: relative;
+        width: 20em;
+        padding:2em 1em;
+        margin:1em;
+        cursor: pointer;
+        background-color: #fff;
+        -webkit-box-shadow: 6px 6px 10px #999;
+        -moz-box-shadow: 6px 6px 10px #999;
+        box-shadow: 6px 6px 10px #999;
     }
-    .good-column .good .icon img{
+    .good-column .good .icon{
+        width: 16em;
+        height:9.5em;
+        overflow: hidden;
+    }
+    /*.good-column .good .icon img{
         width: 4em;
         height:4em;
         border-radius: 1em;
@@ -92,5 +105,5 @@
         background-color:#eee;
         color:red;
         border-radius: 8px
-    }
+    }*/
 }
