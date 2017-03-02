@@ -11,12 +11,12 @@ export default ({onFilterClick}) => {
                 </div>
                 <div id="bs-navbar" className="navbar-collapse collapse">
                     <ul className="nav navbar-nav">
-                        <li><span onClick={() => onFilterClick('xiaowei')}>小薇学院</span></li>
-                        <li><span onClick={() => onFilterClick('jd')} className="link-active">斌斌学院</span></li>
-                        <li><span onClick={() => onFilterClick('alibaba')}>耀耀学院</span></li>
-                        <li><span onClick={() => onFilterClick('apple')}>商业平台学院</span></li>
-                        <li><span onClick={() => onFilterClick('apple')}>Echarts & WebVR</span></li>
-                        <li><span onClick={() => onFilterClick('apple')}>百度糯米学院</span></li>
+                        <li><span onClick={() => onFilterClick('XIAOWEI')}>小薇学院</span></li>
+                        <li><span onClick={() => onFilterClick('BINBIN')} className="link-active">斌斌学院</span></li>
+                        <li><span onClick={() => onFilterClick('YAOYAO')}>耀耀学院</span></li>
+                        <li><span onClick={() => onFilterClick('BUSINESS')}>商业平台学院</span></li>
+                        <li><span onClick={() => onFilterClick('ECHARTSVR')}>Echarts & WebVR</span></li>
+                        <li><span onClick={() => onFilterClick('NUOMI')}>百度糯米学院</span></li>
                     </ul>
                 </div>
             </div>

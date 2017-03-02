@@ -8,34 +8,26 @@ const DEL_GOOD = 'DEL_GOOD'
 
 // Action Creator
 
-//父类过滤
-const filterGood = (goods, type = 'all') => {
-    if (type !== 'all') {
-        return goods.filter(good => {
-            return good.type === type
-        })
-    }
-    return goods;
-}
+
 const fetchGood = (type, dispatch) => {
     goodService.query(type, (goods) => {
-        sessionStorage.goods = JSON.stringify(goods);
+        sessionStorage[type] = JSON.stringify(goods);
         dispatch({
             type: FETCH_GOOD,
-            payload: filterGood(goods, type)
+            payload: goods
         })
     })
 }
 // 设计一次查询所有商品时，前端sessionStorage保存，查询其他类别不走请求
 const queryList = type => dispatch => {
-    if (type === 'all') {
+    if (!sessionStorage[type]) {
         fetchGood(type, dispatch)
     } else {
-        let goods=sessionStorage.goods && JSON.parse(sessionStorage.goods);
+        let goods=sessionStorage[type] && JSON.parse(sessionStorage[type]);
         if (goods && goods.length) {
             dispatch({
                 type: FETCH_GOOD,
-                payload: filterGood(goods, type)
+                payload: goods
             })
         }
     }

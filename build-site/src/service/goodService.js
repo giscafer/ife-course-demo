@@ -3,10 +3,12 @@ require('es6-promise').polyfill();
 import fetch from 'isomorphic-fetch';
 import * as DataJson from './dataJson';
 
-const SERVER_URL = DataJson.XIAOWEI_COURSE_JSON;
+let SERVER_URL = DataJson.XIAOWEI_COURSE_JSON;
+
 class GoodService {
 
-    query(type = 'xiaowei', cb) {
+    query(type = 'XIAOWEI', cb) {
+        SERVER_URL=DataJson[type+'_COURSE_JSON'];
         if (!cb) throw new Error("Bad response from server");
         fetch(`${SERVER_URL}`, {
             method: 'GET'
