@@ -1,6 +1,6 @@
 import React from 'react'
 import  './Header.css'
-export default ({onFilterClick}) => {
+export default ({onFilterClick,filterType}) => {
     return (
         <header className="navbar navbar-static-top">
             <div className="container">
@@ -11,12 +11,12 @@ export default ({onFilterClick}) => {
                 </div>
                 <div id="bs-navbar" className="navbar-collapse collapse">
                     <ul className="nav navbar-nav">
-                        <li><span onClick={() => onFilterClick('XIAOWEI')}>小薇学院</span></li>
-                        <li><span onClick={() => onFilterClick('BINBIN')} className="link-active">斌斌学院</span></li>
-                        <li><span onClick={() => onFilterClick('YAOYAO')}>耀耀学院</span></li>
-                        <li><span onClick={() => onFilterClick('BUSINESS')}>商业平台学院</span></li>
-                        <li><span onClick={() => onFilterClick('ECHARTSVR')}>Echarts & WebVR</span></li>
-                        <li><span onClick={() => onFilterClick('NUOMI')}>百度糯米学院</span></li>
+                        <li className={ filterType === 'XIAOWEI' ? 'selected' : '' }><span onClick={() => onFilterClick('XIAOWEI')}>小薇学院</span></li>
+                        <li className={ filterType === 'BINBIN' ? 'selected' : '' }><span onClick={() => onFilterClick('BINBIN')}>斌斌学院</span></li>
+                        <li className={ filterType === 'YAOYAO' ? 'selected' : '' }><span onClick={() => onFilterClick('YAOYAO')}>耀耀学院</span></li>
+                        <li className={ filterType === 'BUSINESS' ? 'selected' : '' }><span onClick={() => onFilterClick('BUSINESS')}>商业平台学院</span></li>
+                        <li className={ filterType === 'ECHARTSVR' ? 'selected' : '' }><span onClick={() => onFilterClick('ECHARTSVR')}>Echarts & WebVR</span></li>
+                        <li className={ filterType === 'NUOMI' ? 'selected' : '' }><span onClick={() => onFilterClick('NUOMI')}>百度糯米学院</span></li>
                     </ul>
                 </div>
             </div>

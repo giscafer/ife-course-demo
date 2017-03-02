@@ -12,9 +12,9 @@ class HeaderContainer extends Component{
 
 
     render() {
-        let {queryList}=this.props;
+        let {queryList,goods={}}=this.props;
         return (
-            <Header  onFilterClick={queryList}/>
+            <Header  onFilterClick={queryList} filterType={goods.qryType}/>
         )
     }
 }

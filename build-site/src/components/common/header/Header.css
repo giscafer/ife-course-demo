@@ -75,7 +75,16 @@ a {
 .navbar-nav li {
     float: left;
     margin-left: 20px;
+}
+
+.navbar-nav li span {
     cursor: pointer;
+}
+.navbar-nav li.selected {
+    height:50px;
+    background-color: #5e5e5e;
+    padding: 0 10px;
+    border-bottom: 2px solid #fff;
 }
 
 .navbar-nav li span:hover {
@@ -91,18 +100,20 @@ a {
         color: #1d976c
     }
 }
+
 @media screen and  (min-width: 1400px) {
     .container {
         width: 1170px;
     }
 }
+
 @media screen and  (min-width: 1200px) {
     .container {
         width: 1170px;
     }
 }
 
-@media  screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
     .container {
         width: 970px;
     }

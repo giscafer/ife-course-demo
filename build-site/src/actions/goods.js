@@ -27,7 +27,7 @@ const queryList = type => dispatch => {
         if (goods && goods.length) {
             dispatch({
                 type: FETCH_GOOD,
-                payload: goods
+                payload: { goods, qryType: type }
             })
         }
     }

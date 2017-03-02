@@ -12,10 +12,10 @@ class GoodContent extends Component{
     }
 
     render(){
-       let {goods}=this.props;
+       let {good}=this.props;
        return (
             <div className="main-container">
-                <GoodList goods={goods}/>
+                <GoodList goods={good.goods}/>
             </div>
        )
     }
@@ -25,7 +25,7 @@ class GoodContent extends Component{
 function mapStateToProps(state){
     console.log(state.goods)
     return {
-        goods:state.goods
+        good:state.goods
     }
 }
 

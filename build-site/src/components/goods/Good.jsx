@@ -9,7 +9,7 @@ export default ({good = {}}) => {
                     <img src={good.img} alt={good.name} className='good-img'/>
                 </div>
                 <div className='good-name' title={good.name}>
-                    {good.name}<br />
+                    <br />{good.name}
                 </div>
             </a>
         </div>
