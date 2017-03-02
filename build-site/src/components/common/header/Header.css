@@ -1,0 +1,116 @@
+header {
+    background-color: #333;
+    height: 50px;
+    margin-bottom: 0;
+    color: #ddd;
+}
+
+.nav {
+    list-style: none;
+    text-decoration: none;
+    margin-left: 6em;
+}
+
+@media screen and (max-width: 479px) {
+    .nav {
+        margin-left: -1.5em;
+    }
+}
+
+#navbar {
+    margin-bottom: 0
+}
+
+#logo {
+    font-size: 1.5em;
+    margin-right: 40px;
+    color: #1192b9
+}
+
+#forgot_password {
+    float: left
+}
+
+#nv-menu {
+    margin-right: 50px;
+    margin-top: 9px
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar-header {
+    display: inline-block;
+    float: left;
+}
+
+.navbar-nav {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    clear: both;
+}
+
+.navbar-nav:before {
+    display: table;
+    content: " ";
+}
+
+.navbar-nav:after {
+    display: table;
+    content: " ";
+}
+
+.navbar-nav li {
+    float: left;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.navbar-nav li span:hover {
+    color: #fff;
+}
+
+/**
+ * 响应式
+ */
+@media screen and (max-width: 479px) {
+    #logo {
+        font-size: 1.2em;
+        color: #1d976c
+    }
+}
+@media screen and  (min-width: 1400px) {
+    .container {
+        width: 1170px;
+    }
+}
+@media screen and  (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+@media  screen and (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/*
+@media screen and  (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}*/

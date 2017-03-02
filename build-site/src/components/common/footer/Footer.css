@@ -1,0 +1,37 @@
+footer{
+   font-size: 14px;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+}
+.footer::before{
+    display: table;
+    content: " ";
+}
+.footer::after{
+    clear: both;
+    display: table;
+    content: " ";
+}
+.footer ul{
+    display: inline-flex;;
+    display: -webkit-inline-flex;; /* Safari Chrome*/
+    display: -moz-inline-flex;; /* Firefox */
+    list-style: none;
+    justify-content: center
+}  
+.footer li{
+   margin: 0 0.5em 0 0.5em;
+   color:#777
+}
+.footer li>a{
+    color:#333;
+    text-decoration: underline
+}
+
+@media screen and (max-width: 479px) {
+    .footer ul>li.phone{
+        display:none
+    }
+}

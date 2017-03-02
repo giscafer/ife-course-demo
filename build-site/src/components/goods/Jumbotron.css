@@ -1,0 +1,82 @@
+
+#add-good {
+    text-align: center;
+    margin-top: 1em
+}
+.btn {
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    background-color: transparent;
+    height:40px;
+    border: 1px solid #d4d4d4;
+    text-decoration: none;
+    border-radius: 0.5em;
+    line-height:20px;
+    padding: 5px 4em;
+    margin-left: 1em;
+
+}
+.btn:hover{
+    border-color: #fff;
+}
+.jumbotron-btn{
+    margin-top:1em;
+}
+#add-good h4 {
+    margin-left: 5px;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #fff;
+    margin-bottom:10px
+}
+#add-good input{
+    width: 45em;
+    height: 1.9em;
+    border: 1px solid #d5d5d5;
+    border-right: none;
+    border-radius: 2em 0 0 2em;
+    padding: .2em 1em .3em;
+    outline: none
+}
+
+
+.input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap
+}
+
+.input-group-btn>.btn {
+    position: relative;
+    height: 2.5em
+}
+
+@media screen and (max-width:479px){
+    #add-good input{
+        width: 60%;
+        height: 1.4em;
+        border: 1px solid #d5d5d5;
+        border-right: none;
+        border-radius: 1em 0 0 1em;
+        padding: .2em 2em .3em;
+        margin-left:1em;
+        outline: none
+    }
+    #add-good button {
+        border: 1px solid #d5d5d5;
+        padding-left: 1em;
+        text-decoration: none;
+        border-radius: 0 2em 2em 0;
+        line-height:1em;
+        padding-right: 1em
+    }
+
+    .input-group-btn>.btn {
+        position: relative;
+        height: 2em
+    }
+    #add-good h4 {
+        font-size: 1.2em;
+    }
+}

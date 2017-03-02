@@ -1,0 +1,96 @@
+.main-container {
+    margin:5px auto;
+}
+.good-column{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-justify-content:flex-start;
+    -moz-justify-content:flex-start;
+    justify-content:center;
+    /*    flex-direction:column;
+        -webkit-flex-direction:column;
+        -moz-flex-direction:column;*/
+    margin:2em 6em 6em 6em;
+    flex-wrap:wrap;
+    -webkit-flex-wrap:wrap;
+    -moz-flex-wrap:wrap;
+    background-color: #eee
+}
+.good-column .good{
+    position: relative;
+    width: 28em;
+    padding:2em 1em;
+    margin:1em;
+    cursor: pointer;
+    background-color: #fff;
+    -webkit-box-shadow: 6px 6px 10px #999;
+    -moz-box-shadow: 6px 6px 10px #999;
+    box-shadow: 6px 6px 10px #999;
+}
+
+.good-column .good:hover {
+    /*background-color: #eee*/
+}
+
+
+
+.good-column .good .good-price{
+    margin:4px;
+    background-color:#eee;
+    color:red;
+    border-radius: 8px
+}
+.good-column .good .good-name a.detail{
+    background-color:#eee;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+.good-column .good .good-name a.detail:hover{
+    background-color:green;
+    color: #fff
+}
+.good-column .good .icon{
+   width: 22em;
+   height:13em;
+   overflow: hidden;
+   margin-left: 10%;
+
+
+}
+.good-column .good .icon img{
+    width: 22em;
+    height:13em;
+}
+
+.good-column .good .icon img:hover{
+    transform: scale(1.3);
+    transition: all 1s ease 0s;
+    -webkit-transform: scale(1.3);
+    -webkit-transform: all 1s ease 0s;
+}
+
+@media screen and (max-width:479px){
+    .good-column{
+        -webkit-justify-content:space-around;
+        -moz-justify-content:space-around;
+        justify-content:space-around;
+        margin:1em 0.53em 2em 0.3em;
+
+    }
+    .good-column .good{
+        width: 4em;
+        padding: 1em 1em;
+    }
+    .good-column .good .icon img{
+        width: 4em;
+        height:4em;
+        border-radius: 1em;
+    }
+    .good-column .good .good-price{
+        margin:4px;
+        font-size: 0.9em;
+        background-color:#eee;
+        color:red;
+        border-radius: 8px
+    }
+}
