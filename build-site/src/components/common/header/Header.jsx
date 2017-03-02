@@ -6,7 +6,7 @@ export default ({onFilterClick}) => {
             <div className="container">
                 <div className="navbar-header">
                     <ul className="nav navbar-nav">
-                        <li><a href="../" id="logo" title="价格监测">Ponitor</a></li>
+                        <li><a href="../" id="logo" title="百度前端技术学院demo">百度前端技术学院demo</a></li>
                     </ul>
                 </div>
                 <div id="bs-navbar" className="navbar-collapse collapse">

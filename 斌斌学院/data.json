@@ -1,0 +1,26 @@
+[
+  {
+    "name": "任务一：零基础HTML编码",
+    "description":"完成一个HTML页面代码编写（不写CSS，不需要关注样式，只关注文档结构）",
+    "img": "https://raw.githubusercontent.com/giscafer/ife-course-demo/master/小薇学院/xiaowei.jpg",
+    "url": "http://giscafer.com/ife-course-demo/小薇学院/任务一：零基础HTML编码/index.html"
+  },
+  {
+    "name": "任务二：零基础HTML及CSS编码（一）",
+    "description":"完成一个HTML页面代码编写（不写CSS，不需要关注样式，只关注文档结构）",
+    "img": "https://raw.githubusercontent.com/giscafer/ife-course-demo/master/小薇学院/xiaowei.jpg",
+    "url": "http://giscafer.com/ife-course-demo/小薇学院/任务二：零基础HTML及CSS编码（一）/index.html"
+  },
+  {
+    "name": "任务三：三栏式布局",
+    "description":"完成一个HTML页面代码编写（不写CSS，不需要关注样式，只关注文档结构）",
+    "img": "https://raw.githubusercontent.com/giscafer/ife-course-demo/master/小薇学院/xiaowei.jpg",
+    "url": "http://giscafer.com/ife-course-demo/小薇学院/任务三：三栏式布局/index.html"
+  },
+  {
+    "name": "任务四：定位和居中问题",
+    "description":"完成一个HTML页面代码编写（不写CSS，不需要关注样式，只关注文档结构）",
+    "img": "https://raw.githubusercontent.com/giscafer/ife-course-demo/master/小薇学院/xiaowei.jpg",
+    "url": "http://giscafer.com/ife-course-demo/小薇学院/任务四：定位和居中问题/index.html"
+  }
+]
