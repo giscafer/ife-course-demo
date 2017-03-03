@@ -6,7 +6,8 @@ import  './Jumbotron.css';
 
 export default ()=>{
     return (
-        <div id="add-good">
+        <div id="banner">
+            <br/>
              <h2>百度前端技术学院习题demo</h2><br/>
              <small>习题正在学习中，持续更新……</small>
             <div className="jumbotron-btn">

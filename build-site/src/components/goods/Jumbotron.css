@@ -1,5 +1,5 @@
 
-#add-good {
+#banner {
     text-align: center;
     margin-top: 1em
 }
@@ -23,14 +23,14 @@
 .jumbotron-btn{
     margin-top:1em;
 }
-#add-good h4 {
+#banner h4 {
     margin-left: 5px;
     font-size: 1.5em;
     font-weight: normal;
     color: #fff;
     margin-bottom:10px
 }
-#add-good input{
+#banner input{
     width: 45em;
     height: 1.9em;
     border: 1px solid #d5d5d5;
@@ -53,7 +53,7 @@
 }
 
 @media screen and (max-width:479px){
-    #add-good input{
+    #banner input{
         height: 1.4em;
         border: 1px solid #d5d5d5;
         border-right: none;
@@ -71,7 +71,7 @@
         position: relative;
         height: 2em
     }
-    #add-good h2{
+    #banner h2{
         font-size: 1.2em;
     }
 }
