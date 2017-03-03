@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+    <link type="text/css" rel="stylesheet" href="../../public/css/style.css"/>
+</head>
+<style>
+    #display{
+        font-size: 18px;
+    }
+</style>
+<body>
+<div class="nav">
+    <a href="http://ife.giscafer.com">返回demo演示站</a>
+</div>
+<div id="display">
+<label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
+<button id="button">确认填写</button>
+
+<div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+</div>
+<script type="text/javascript">
+
+    (function() {
+        /*
+         在注释下方写下代码
+         给按钮button绑定一个点击事件
+         在事件处理函数中
+         获取aqi-input输入的值，并显示在aqi-display中
+         */
+        var btn=document.getElementById("button");
+        var input=document.getElementById("aqi-input");
+        var display=document.getElementById("aqi-display");
+        btn.onclick=function () {
+            display.innerHTML=input.value;
+        }
+
+    })();
+
+</script>
+
+
+<div id="source">
+    <h2>JavaScript源码</h2>
+    <pre>
+        (function() {
+            /*
+             在注释下方写下代码
+             给按钮button绑定一个点击事件
+             在事件处理函数中
+             获取aqi-input输入的值，并显示在aqi-display中
+             */
+            var btn=document.getElementById("button");
+            var input=document.getElementById("aqi-input");
+            var display=document.getElementById("aqi-display");
+            btn.onclick=function () {
+                display.innerHTML=input.value;
+            }
+
+        })();
+    </pre>
+</div>
+<script type="text/javascript" src="../../public/js/utils.js"></script>
+</body>
+</html>
