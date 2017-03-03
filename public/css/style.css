@@ -1,13 +1,30 @@
 body {
-    background: black url(../img/background.jpg)  repeat;
+    background: black url(../img/background.jpg) repeat;
     margin: 0 auto;
     width: 1001px;
+}
+@media screen and (max-width:479px){
+    body {
+        background: #333;
+        margin: 0 auto;
+        width: 1001px;
+
+    }
+    #display {
+        font-size: 3em!important;
+    }
+    input{
+        height: 3em;
+    }
+    button{
+        height: 3em;
+    }
 }
 #display {
     background: transparent;
     width: 949px;
     height: 294px;
-    margin-top: 30px;
+    margin-top: 10%;
     margin-left: 30px;
     font-family: Courier, monospace;
     font-size: 12px;
@@ -74,7 +91,9 @@ h2 {
 }
 .nav{
     float: right;
-
+    top: 20px;
+    position: absolute;
+    right: 5%;
 }
 .nav a{
     color: #fff;
