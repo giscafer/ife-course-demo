@@ -1,0 +1,84 @@
+body {
+    background: black url(../img/background.jpg)  repeat;
+    margin: 0 auto;
+    width: 1001px;
+}
+#display {
+    background: transparent;
+    width: 949px;
+    height: 294px;
+    margin-top: 30px;
+    margin-left: 30px;
+    font-family: Courier, monospace;
+    font-size: 12px;
+    color: #ccc;
+}
+#source {
+    position: absolute;
+    background: transparent url(../img/source.jpg) no-repeat;
+    background-size: 100% 700px;
+    width: 949px;
+    bottom: 30px;
+    margin-left: 30px;
+    font-family: Courier, monospace;
+    font-size: 12px;
+    color: #ccc;
+}
+
+h1 {
+    font-size: 50px;
+    width: 1001px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    padding: 10px 0 20px 10px;
+}
+
+#source pre {
+    display: block;
+    margin-left: 10px;
+    height: 450px;
+    margin-top: 0;
+    overflow: auto;
+    width: 937px;
+}
+
+#console {
+    background: transparent url(../img/consola.png) no-repeat;
+    width: 1001px;
+    height: 392px;
+    margin-top: 50px;
+    font-family: Courier, monospace;
+    font-size: 12px;
+    color: #ccc;
+}
+
+#console ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0 0 50px;
+    font-family: Courier, monospace;
+    font-size: 12px;
+    color: #ccc;
+    height: 208px;
+    width: 924px;
+    overflow: auto;
+}
+
+#console h2 {
+    margin: 0;
+    padding: 10px 0 20px 40px;
+}
+.nav{
+    float: right;
+
+}
+.nav a{
+    color: #fff;
+}
+.nav a:hover{
+    color: #1192b9;
+}
