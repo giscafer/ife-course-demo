@@ -8,6 +8,7 @@ const DEL_GOOD = 'DEL_GOOD'
 
 // Action Creator
 
+if(!sessionStorage) sessionStorage=window;
 
 const fetchGood = (type, dispatch) => {
     goodService.query(type, (goods) => {
