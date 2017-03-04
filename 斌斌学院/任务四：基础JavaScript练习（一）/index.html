@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 02</title>
+    <link type="text/css" rel="stylesheet" href="../../public/css/style.css"/>
+</head>
+<style>
+    #sequence{
+        margin-top:20px;
+        font-size: 18px;
+    }
+    #sequence span{
+        /*width: 10px;*/
+        /*height: 10px;*/
+        padding: 10px 10px;
+        background-color: red;
+        margin-left:10px;
+        cursor:pointer;
+    }
+    button{
+        cursor:pointer;
+    }
+</style>
+<body>
+<div class="nav">
+    <a href="https://raw.githubusercontent.com/giscafer/ife-course-demo/master/斌斌学院/任务四：基础JavaScript练习（一）/index.html" target="_blank">demo源码</a>
+    <a href="http://ife.baidu.com/course/detail/id/103">查看原题</a>
+    <a href="http://ife.giscafer.com">返回demo演示站</a>
+</div>
+<div id="code-display">
+    <p>有一个input输入框，以及4个操作按钮</p>
+    <p>点击"左侧入"，将input中输入的数字从左侧插入队列中；</p>
+    <p>点击"右侧入"，将input中输入的数字从右侧插入队列中；</p>
+    <p>点击"左侧出"，读取并删除队列左侧第一个元素，并弹窗显示元素中数值；</p>
+    <p>点击"右侧出"，读取并删除队列又侧第一个元素，并弹窗显示元素中数值；</p>
+    <p>点击队列中任何一个元素，则该元素会被从队列中删除</p>
+
+</div>
+
+<div id="source">
+    <h2>demo演示</h2>
+    <div>
+        <input type="text" id="in"/>
+        <button onclick="insertLeft()">左侧入</button>
+        <button onclick="insertRight()">右侧入</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onclick="removeLeft()">左侧出</button>
+        <button onclick="removeRight()">右侧出</button>
+        <div id="sequence">
+            <span>11</span>
+            <span>12</span>
+            <span>13</span>
+        </div>
+    </div>
+</div>
+<script>
+    var sequenceDom=document.getElementById("sequence");
+    var inputDom=document.getElementById("in");
+
+    /**
+     * 获取input值
+     */
+    function getInputValue(){
+        return inputDom.value;
+    }
+    function insertLeft(){
+        var span=document.createElement("span");
+        span.innerText= getInputValue();
+        sequenceDom.insertBefore(span,sequenceDom.children[0]);
+    }
+    function insertRight(){
+        var span=document.createElement("span");
+        span.innerText= getInputValue();
+        sequenceDom.appendChild(span);
+    }
+    function removeLeft() {
+        var temp=sequenceDom.children[0];
+        alert('移除左侧数字：'+temp.innerText)
+        sequenceDom.removeChild(temp);
+    }
+    function removeRight() {
+        var temp=sequenceDom.children[sequenceDom.children.length-1];
+        alert('移除右侧数字：'+temp.innerText);
+        sequenceDom.removeChild(temp);
+    }
+    sequenceDom.addEventListener('click',function(e){
+        console.log(e)
+        if(e.target && e.target.nodeName==='SPAN'){
+            sequenceDom.removeChild(e.target);
+        }
+    });
+</script>
+</body>
+</html>
