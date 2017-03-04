@@ -106,9 +106,9 @@ a {
        z-index: 1000;
        display: none;
     }
-    #bs-navbar span:hover ~ ul{
-        display: block;
-    }
+    /*#bs-navbar span:hover ~ ul{*/
+        /*display: block;*/
+    /*}*/
     #bs-navbar .navbar-nav li {
         clear: both;
         border-top: 1px solid #ddd;
@@ -118,6 +118,7 @@ a {
     }
     #bs-navbar span.btn{
         display:inline;
+        line-height: 50px;
     }
     .menu-btn:hover ~ #bs-navbar .navbar-nav{
         display: block;
