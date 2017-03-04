@@ -72,8 +72,8 @@
 
         }
         //升序排列
-        function ascend(x,y){
-                return x[1]-y[1];
+        function ascend(x, y) {
+            return x[1] - y[1];
         }
         /**
          * sortAqiData
@@ -91,19 +91,18 @@
          * 格式见ul中的注释的部分
          */
         function render(data) {
-            var liHtmlStr="";
-            var count=1;
-            for(var i=0;i<data.length;i++){
-                liHtmlStr+='<li>第'+convert(count)+'名：'+data[i][0]+'空气质量：<b>'+data[i][1]+'</b></li>';
+            var liHtmlStr = "";
+            var count = 1;
+            for (var i = 0; i < data.length; i++) {
+                liHtmlStr += '<li>第' + convert(count) + '名：' + data[i][0] + '空气质量：<b>' + data[i][1] + '</b></li>';
                 count++;
             }
-            document.getElementById("resort").innerHTML=liHtmlStr;
-
+            document.getElementById("resort").innerHTML = liHtmlStr;
 
 
         }
-        function convert(n){
-            var arr=["零","一","二","三","四","五","六","七","八","九","十"];
+        function convert(n) {
+            var arr = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
             return arr[n];
         }
         function btnHandle() {
@@ -112,11 +111,11 @@
             render(aqiData);
         }
 
-        var sortBtn= document.getElementById("sort-btn");
+        var sortBtn = document.getElementById("sort-btn");
         function init() {
 
             // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
-            sortBtn.onclick=function () {
+            sortBtn.onclick = function () {
                 btnHandle();
             };
 
@@ -162,27 +161,18 @@
 
         }
 
+         //升序排列
+        function ascend(x,y){
+                return x[1]-y[1];
+        }
         /**
          * sortAqiData
          * 按空气质量对data进行从小到大的排序
          * 返回一个排序后的数组
          */
         function sortAqiData(data) {
-            var result=[];
-            var values=[],obj={};
-            for(var i=0;i<data.length;i++){
-                var item=data[i];
-                values.push(item[1]);
-                obj[item[1]]=item[0];
-            }
-            values.sort();
 
-            for (var j=0;j<values.length;j++){
-                var arr=[];
-                arr=[obj[values[j]],values[j]];
-                result.push(arr);
-            }
-            return result;
+            return data.sort(ascend);
         }
 
         /**
