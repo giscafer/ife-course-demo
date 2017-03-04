@@ -10,7 +10,7 @@ body {
         width: 1001px;
 
     }
-    #display {
+    #code-display {
         font-size: 3em!important;
     }
     input{
@@ -20,17 +20,17 @@ body {
         height: 3em;
     }
 }
-#display {
+#code-display {
     background: transparent;
     width: 949px;
     height: 294px;
     margin-top: 10%;
     margin-left: 30px;
     font-family: Courier, monospace;
-    font-size: 12px;
+    font-size: 16px;
     color: #ccc;
 }
-#source {
+#code-source {
     position: absolute;
     background: transparent url(../img/source.jpg) no-repeat;
     background-size: 100% 700px;
@@ -38,7 +38,7 @@ body {
     bottom: 30px;
     margin-left: 30px;
     font-family: Courier, monospace;
-    font-size: 12px;
+    font-size: 14px;
     color: #ccc;
 }
 
@@ -54,13 +54,14 @@ h2 {
     padding: 10px 0 20px 10px;
 }
 
-#source pre {
+#code-source pre {
     display: block;
     margin-left: 10px;
     height: 450px;
     margin-top: 0;
     overflow: auto;
     width: 937px;
+    font-size: 16px;
 }
 
 #console {
@@ -94,9 +95,11 @@ h2 {
     top: 20px;
     position: absolute;
     right: 5%;
+
 }
 .nav a{
     color: #fff;
+    margin-left: 3em;
 }
 .nav a:hover{
     color: #1192b9;
