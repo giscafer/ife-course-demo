@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 02</title>
+    <link type="text/css" rel="stylesheet" href="../../public/css/style.css"/>
+</head>
+<style>
+    #display {
+        font-size: 18px;
+    }
+</style>
+<body>
+<div class="nav">
+    <a href="http://ife.baidu.com/course/detail/id/98" target="_blank">查看习题要求</a>
+    <a href="http://ife.giscafer.com">返回demo演示站</a>
+</div>
+<div id="code-display" style="display:inline-block;">
+    <ul id="source" style="width: 300px;float: left">
+        <li>北京空气质量：<b>90</b></li>
+        <li>上海空气质量：<b>70</b></li>
+        <li>天津空气质量：<b>80</b></li>
+        <li>广州空气质量：<b>50</b></li>
+        <li>深圳空气质量：<b>40</b></li>
+        <li>福州空气质量：<b>32</b></li>
+        <li>成都空气质量：<b>90</b></li>
+    </ul>
+    <ul id="resort" style="width: 350px;float: right">
+        <!--
+        <li>第一名：北京空气质量：<b>90</b></li>
+        <li>第二名：北京空气质量：<b>90</b></li>
+        <li>第三名：北京空气质量：<b>90</b></li>
+         -->
+
+    </ul>
+
+    <div>
+        <button id="sort-btn">排序</button>
+    </div>
+
+    <script type="text/javascript">
+
+        /**
+         * getData方法
+         * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
+         * 返回一个数组，格式见函数中示例
+         */
+        var sourceNode = document.getElementById("source");
+        function getData() {
+            var data = [], obj = {};
+            var childNodes = sourceNode.children;
+            for (var i = 0; i < childNodes.length; i++) {
+                var temp = childNodes[i];
+                if (temp.nodeType === 1) {
+                    var childHtml = temp.innerHTML;
+                    var cityName = childHtml.substr(0, 2);
+                    var pValue = temp.children[0].innerText;
+                    var arr = [cityName, Number.parseInt(pValue)];
+                    data.push(arr);
+                }
+            }
+
+            /*
+             data = [
+             ["北京", 90],
+             ["北京", 90]
+             ……
+             ]
+             */
+            console.log(data)
+            return data;
+
+        }
+        //升序排列
+        function ascend(x,y){
+                return x[1]-y[1];
+        }
+        /**
+         * sortAqiData
+         * 按空气质量对data进行从小到大的排序
+         * 返回一个排序后的数组
+         */
+        function sortAqiData(data) {
+
+            return data.sort(ascend);
+        }
+
+        /**
+         * render
+         * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
+         * 格式见ul中的注释的部分
+         */
+        function render(data) {
+            var liHtmlStr="";
+            var count=1;
+            for(var i=0;i<data.length;i++){
+                liHtmlStr+='<li>第'+convert(count)+'名：'+data[i][0]+'空气质量：<b>'+data[i][1]+'</b></li>';
+                count++;
+            }
+            document.getElementById("resort").innerHTML=liHtmlStr;
+
+
+
+        }
+        function convert(n){
+            var arr=["零","一","二","三","四","五","六","七","八","九","十"];
+            return arr[n];
+        }
+        function btnHandle() {
+            var aqiData = getData();
+            aqiData = sortAqiData(aqiData);
+            render(aqiData);
+        }
+
+        var sortBtn= document.getElementById("sort-btn");
+        function init() {
+
+            // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+            sortBtn.onclick=function () {
+                btnHandle();
+            };
+
+        }
+
+        init();
+    </script>
+
+</div>
+
+<div id="code-source">
+    <h2>JavaScript源码</h2>
+    <pre>
+         /**
+         * getData方法
+         * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
+         * 返回一个数组，格式见函数中示例
+         */
+        var sourceNode = document.getElementById("source");
+        function getData() {
+            var data = [], obj = {};
+            var childNodes = sourceNode.children;
+            for (var i = 0; i < childNodes.length; i++) {
+                var temp = childNodes[i];
+                if (temp.nodeType === 1) {
+                    var childHtml = temp.innerHTML;
+                    var cityName = childHtml.substr(0, 2);
+                    var pValue = temp.children[0].innerText;
+                    var arr = [cityName, Number.parseInt(pValue)];
+                    data.push(arr);
+                }
+            }
+
+            /*
+             data = [
+             ["北京", 90],
+             ["北京", 90]
+             ……
+             ]
+             */
+            console.log(data)
+            return data;
+
+        }
+
+        /**
+         * sortAqiData
+         * 按空气质量对data进行从小到大的排序
+         * 返回一个排序后的数组
+         */
+        function sortAqiData(data) {
+            var result=[];
+            var values=[],obj={};
+            for(var i=0;i<data.length;i++){
+                var item=data[i];
+                values.push(item[1]);
+                obj[item[1]]=item[0];
+            }
+            values.sort();
+
+            for (var j=0;j<values.length;j++){
+                var arr=[];
+                arr=[obj[values[j]],values[j]];
+                result.push(arr);
+            }
+            return result;
+        }
+
+        /**
+         * render
+         * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
+         * 格式见ul中的注释的部分
+         */
+        function render(data) {
+            var liHtmlStr="";
+            var count=1;
+            for(var i=0;i<data.length;i++){
+                liHtmlStr+='&lt;li>第'+convert(count)+'名：'+data[i][0]+'空气质量：&lt;b>'+data[i][1]+'&lt;/b>&lt;/li>';
+                count++;
+            }
+            document.getElementById("resort").innerHTML=liHtmlStr;
+
+
+
+        }
+        function convert(n){
+            var arr=["零","一","二","三","四","五","六","七","八","九","十"];
+            return arr[n];
+        }
+        function btnHandle() {
+            var aqiData = getData();
+            aqiData = sortAqiData(aqiData);
+            render(aqiData);
+        }
+
+        var sortBtn= document.getElementById("sort-btn");
+        function init() {
+
+            // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+            sortBtn.onclick=function () {
+                btnHandle();
+            };
+
+        }
+
+        init();
+    </pre>
+</div>
+<script type="text/javascript" src="../../public/js/utils.js"></script>
+</body>
+</html>
