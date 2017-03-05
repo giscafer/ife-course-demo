@@ -17,6 +17,11 @@
 
 习题源码会按文件夹目录`XXX学院/XXX任务/index.html`的方式存放，每道习题入口页都为`index.html`
 
+
+## License
+
+MIT
+
 ---
 
 > [giscafer.com](http://giscafer.com) &nbsp;&middot;&nbsp;

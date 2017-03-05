@@ -53,23 +53,23 @@ export default class Header extends React.Component {
                                     onFilterClick('BINBIN')
                                 }}>斌斌学院</span></li>
                             <li className={ filterType === 'YAOYAO' ? 'selected' : '' }><span
-                                onClick={() => {
-                                    this.menuClickHandler();
+                                onClick={(e) => {
+                                    this.menuClickHandler(e);
                                     onFilterClick('YAOYAO')
                                 }}>耀耀学院</span></li>
                             <li className={ filterType === 'BUSINESS' ? 'selected' : '' }><span
-                                onClick={() => {
-                                    this.menuClickHandler();
+                                onClick={(e) => {
+                                    this.menuClickHandler(e);
                                     onFilterClick('BUSINESS')
                                 }}>商业平台学院</span></li>
                             <li className={ filterType === 'ECHARTSVR' ? 'selected' : '' }><span
-                                onClick={() => {
-                                    this.menuClickHandler();
+                                onClick={(e) => {
+                                    this.menuClickHandler(e);
                                     onFilterClick('ECHARTSVR')
                                 }}>Echarts & WebVR</span></li>
                             <li className={ filterType === 'NUOMI' ? 'selected' : '' }><span
-                                onClick={() => {
-                                    this.menuClickHandler();
+                                onClick={(e) => {
+                                    this.menuClickHandler(e);
                                     onFilterClick('NUOMI')
                                 }}>百度糯米学院</span></li>
                         </ul>
