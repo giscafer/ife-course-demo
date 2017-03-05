@@ -124,7 +124,7 @@
         border-radius: 8px
     }*/
 }
-@media screen and (max-width:320px){
+@media screen and (max-width:400px){
     .good-column{
         -webkit-justify-content:center;
         -moz-justify-content:center;
