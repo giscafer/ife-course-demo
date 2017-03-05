@@ -34,7 +34,7 @@ export default class Header extends React.Component {
         return (
             <header className="navbar navbar-static-top">
                 <div className="container">
-                    <div className="navbar-header">
+                    <div id="logo-nav" className="navbar-header">
                         <ul className="nav navbar-nav">
                             <li><a href="../" id="logo" title="百度前端技术学院demo">百度前端技术学院demo</a></li>
                         </ul>

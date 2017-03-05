@@ -20,11 +20,15 @@ header {
 #navbar {
     margin-bottom: 0
 }
+#logo-nav{
+    position: absolute;
+    width: 18em;
+    left:200px;
 
+}
 #logo {
     font-size: 1.5em;
-    margin-right: 40px;
-    color: #1192b9
+    color: #1d976c
 }
 
 #forgot_password {
@@ -95,12 +99,18 @@ a {
 
 #bs-navbar span.btn {
     display: none;
+    margin-left: 12em;
+    width: 200px;
 }
 
 /**
  * 响应式
  */
 @media screen and (max-width: 479px) {
+    #logo-nav {
+        width: 15em;
+        left: -25px;
+    }
     #logo {
         font-size: 1.2em;
         color: #1d976c

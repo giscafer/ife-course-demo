@@ -73,7 +73,7 @@
    width: 22em;
    height:13em;
    overflow: hidden;
-   margin-left: 10%;
+   margin: 0 auto;
 }
 .good-column .good .icon img{
     width: 22em;
@@ -87,7 +87,7 @@
     -webkit-transform: all 1s ease 0s;
 }
 
-@media screen and (max-width:479px){
+@media screen and (max-width:479px)  and (min-width: 375px){
     .good-column{
         -webkit-justify-content:center;
         -moz-justify-content:center;
@@ -97,7 +97,7 @@
     }
     .good-column .good{
         position: relative;
-        width: 20em;
+        width: 18em;
         padding:2em 1em;
         margin:1em;
         cursor: pointer;
@@ -107,7 +107,7 @@
         box-shadow: 6px 6px 10px #999;
     }
     .good-column .good .icon{
-        width: 16em;
+        width: 15em;
         height:9.5em;
         overflow: hidden;
     }
@@ -123,4 +123,30 @@
         color:red;
         border-radius: 8px
     }*/
+}
+@media screen and (max-width:320px){
+    .good-column{
+        -webkit-justify-content:center;
+        -moz-justify-content:center;
+        justify-content:center;
+        margin:1em 0.53em 2em 0.3em;
+
+    }
+    .good-column .good{
+        position: relative;
+        width: 16em;
+        padding:1em 0.5em;
+        margin:1em;
+        cursor: pointer;
+        background-color: #fff;
+        -webkit-box-shadow: 6px 6px 10px #999;
+        -moz-box-shadow: 6px 6px 10px #999;
+        box-shadow: 6px 6px 10px #999;
+    }
+    .good-column .good .icon{
+        width: 13em;
+        height:9.5em;
+        overflow: hidden;
+    }
+
 }
