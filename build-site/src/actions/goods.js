@@ -3,6 +3,7 @@ import goodService from '../service/goodService'
 
 // Action Type
 const FETCH_GOOD = 'FETCH_GOOD'
+const RECEIVE_GOOD = 'RECEIVE_GOOD'
 const ADD_GOOD = 'ADD_GOOD'
 const DEL_GOOD = 'DEL_GOOD'
 
@@ -10,15 +11,25 @@ const DEL_GOOD = 'DEL_GOOD'
 
 if(!sessionStorage) sessionStorage=window;
 
+const receiveGood=(type,goods) =>({
+    type:RECEIVE_GOOD,
+    payload: { goods, qryType: type ,isFetching:false}
+
+})
+
 const fetchGood = (type, dispatch) => {
+    dispatch({
+        type: FETCH_GOOD,
+        payload: { goods:[], qryType: type ,isFetching:true}
+    })
     goodService.query(type, (goods) => {
         sessionStorage[type] = JSON.stringify(goods);
-        dispatch({
-            type: FETCH_GOOD,
-            payload: { goods, qryType: type }
-        })
+        dispatch(receiveGood(type,goods))
+
     })
 }
+
+
 // 设计一次查询所有商品时，前端sessionStorage保存，查询其他类别不走请求
 const queryList = type => dispatch => {
     if (!sessionStorage[type]) {
@@ -26,10 +37,7 @@ const queryList = type => dispatch => {
     } else {
         let goods=sessionStorage[type] && JSON.parse(sessionStorage[type]);
         if (goods && goods.length) {
-            dispatch({
-                type: FETCH_GOOD,
-                payload: { goods, qryType: type }
-            })
+            dispatch(receiveGood(type,goods))
         }
     }
 }
@@ -46,5 +54,6 @@ export default {
 // 故在此直接给出处理逻辑
 // ================================
 export const ACTION_HANDLERS = {
-    [FETCH_GOOD]: (goods, {payload}) => payload
+    [FETCH_GOOD]: (goods, {payload}) => payload,
+    [RECEIVE_GOOD]: (goods, {payload}) => payload
 }

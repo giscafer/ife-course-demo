@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>IFE JavaScript Task 02</title>
+    <title>任务四：基础JavaScript练习（一）</title>
     <link type="text/css" rel="stylesheet" href="../../public/css/style.css"/>
 </head>
 <style>
@@ -83,6 +83,9 @@
         alert('移除右侧数字：'+temp.innerText);
         sequenceDom.removeChild(temp);
     }
+    /**
+     * 可以使用事件委托的方式绑定点击事件
+     */
     sequenceDom.addEventListener('click',function(e){
         console.log(e)
         if(e.target && e.target.nodeName==='SPAN'){

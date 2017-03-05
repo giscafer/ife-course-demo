@@ -4,6 +4,23 @@
     margin-bottom: 80px;
     margin-top:250px;
 }
+@media screen and  (min-width: 1400px) {
+    .main-container {
+        min-width: 1170px;
+    }
+}
+
+@media screen and  (min-width: 1200px) {
+    .main-container {
+        min-width: 1170px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .main-container {
+        min-width: 970px;
+    }
+}
 .good-column{
     display: -webkit-flex; /* Safari */
     display: flex;

@@ -53,6 +53,7 @@ a {
 }
 
 .navbar-nav {
+    position: relative;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -80,8 +81,9 @@ a {
 .navbar-nav li span {
     cursor: pointer;
 }
+
 .navbar-nav li.selected {
-    height:50px;
+    height: 50px;
     background-color: #5e5e5e;
     padding: 0 10px;
     border-bottom: 2px solid #fff;
@@ -90,9 +92,11 @@ a {
 .navbar-nav li span:hover {
     color: #fff;
 }
-#bs-navbar span.btn{
+
+#bs-navbar span.btn {
     display: none;
 }
+
 /**
  * 响应式
  */
@@ -101,31 +105,37 @@ a {
         font-size: 1.2em;
         color: #1d976c
     }
-    #bs-navbar .navbar-nav{
-       position: relative;
-       z-index: 1000;
-       display: none;
+
+    #bs-navbar .navbar-nav {
+        display: none;
+        position: relative;
+        z-index: 1000;
+        width: 100%;
     }
+
     /*#bs-navbar span:hover ~ ul{*/
-        /*display: block;*/
+    /*display: block;*/
     /*}*/
     #bs-navbar .navbar-nav li {
         clear: both;
         border-top: 1px solid #ddd;
         background-color: #2d3e4d;
-        width:100%;
-        margin:0;
+        width: 100%;
+        margin: 0;
     }
-    #bs-navbar span.btn{
-        display:inline;
+
+    #bs-navbar span.btn {
+        display: inline;
         line-height: 50px;
     }
-    .menu-btn:hover ~ #bs-navbar .navbar-nav{
+
+    .menu-btn:hover ~ #bs-navbar .navbar-nav {
         display: block;
     }
+
     #bs-navbar .navbar-nav li.selected {
         padding: 0;
-        border:none;
+        border: none;
     }
 }
 

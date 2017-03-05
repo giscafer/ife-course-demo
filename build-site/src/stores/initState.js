@@ -5,6 +5,7 @@
 export default {
     good:{
         goods:[],
-        goodType:''
+        goodType:'',
+        isFetching:false
     }
 }
