@@ -106,7 +106,7 @@ a {
 /**
  * 响应式
  */
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 768px) {
     #logo-nav {
         width: 15em;
         left: -25px;
@@ -149,7 +149,11 @@ a {
     }
 }
 
-@media screen and  (min-width: 1400px) {
+@media screen and  (max-width: 1440px) and (min-width: 800px){
+    #logo-nav {
+        position: relative;
+        left: 0px;
+    }
     .container {
         width: 1170px;
     }
