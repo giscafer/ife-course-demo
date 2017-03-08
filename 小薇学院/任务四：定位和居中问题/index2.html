@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>定位居中2</title>
     <style>
         html,body{
-            height:100%;
+            margin: 0px;
+            padding:0px;
         }
-        #floater{
-            float:left;
-            height: 50%;/*相对父元素高度的一半*/
-            margin-bottom: -120px;/*大小为居中元素的一半*/
-        }
+
         #content{
-            position: relative;
-            margin:0 auto;/*水平居中*/
-            clear: both;
-            height: 200px;
+            position: absolute;
             background-color: #ccc;
-            width: 400px;
             overflow: hidden;
+            padding: 10px 50px;
+            left: 50%;
+            top:50%;
+            -moz-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
         }
         .circle-lt,.circle-rb{
             position: absolute;
@@ -42,12 +42,16 @@
     </style>
 </head>
 <body>
-<a href="./index2.html">查看高度自适应的方式</a>
-<div id="floater"></div>
+<a href="./index.html">查看高度固定的方式</a>
 <div id="content">
+    <p> 垂直居中，高度和内容一致 </p>
+    <p> transform: translate(-50%,-50%);</p>
+    <p> transform: translate(-50%,-50%);</p>
+    <p> transform: translate(-50%,-50%);</p>
+    <p> transform: translate(-50%,-50%);</p>
+    <p> transform: translate(-50%,-50%);</p>
     <div class="circle-lt"></div>
     <div class="circle-rb"></div>
 </div>
-
 </body>
 </html>
