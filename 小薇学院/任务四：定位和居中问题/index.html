@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            height:100%;
+        }
+        #floater{
+            float:left;
+            height: 50%;/*相对父元素高度的一半*/
+            margin-bottom: -120px;/*大小为居中元素的一半*/
+        }
+        #content{
+            position: relative;
+            margin:0 auto;/*水平居中*/
+            clear: both;
+            height: 200px;
+            background-color: #ccc;
+            width: 400px;
+            overflow: hidden;
+        }
+        .circle-lt,.circle-rb{
+            position: absolute;
+            background-color: #fc0;
+            width: 100px;
+            height: 100px;
+            -webkit-border-radius:50px;
+            -moz-border-radius:50px;
+            border-radius:50px;
+        }
+        .circle-lt{
+            left:-50px;
+            top:-50px;
+        }
+        .circle-rb{
+            bottom:-50px;
+            right:-50px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="floater"></div>
+<div id="content">
+    <div class="circle-lt"></div>
+    <div class="circle-rb"></div>
+</div>
+
+</body>
+</html>
