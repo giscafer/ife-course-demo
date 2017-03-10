@@ -1,0 +1,203 @@
+/**
+ * @author: giscafer
+ * @github: https://github.com/giscafer/ife-course-demo
+ */
+body,p,h1{
+    margin: 0;
+}
+h3,span.text{
+    color:#5e5e5e;
+}
+body{
+    background-color: #eeeeee;
+}
+section{
+    margin:30px 30px;
+    padding:20px;
+    background-color: #fff;
+    border-top: 1px solid #e3e3e3;
+    border-left: 1px solid #e3e3e3;
+    border-right: 3px solid #5e5e5e;
+    border-bottom: 3px solid #5e5e5e;
+}
+.header{
+    height:60px;
+    width:100%;
+    background-color: #333;
+}
+.logo-name{
+    font-size:24px;
+    color: #fff;
+    line-height:50px;
+    margin-left: 10px;
+}
+.text-right{
+    float:right;
+}
+ul.menu{
+    position: relative;
+    right:20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height:50px;
+}
+ul.menu > li{
+    height:58px;
+    width:150px;
+    float:left;
+    text-align: center;
+    margin-left:30px;
+   border-bottom:4px solid transparent;
+}
+
+ul.menu > li:hover{
+   background-color: #888;
+   border-bottom-color: #00a0e9;
+    padding: 0 3px;
+
+}
+ul.menu > li a{
+     color: #fff;
+    text-decoration: none;
+}
+.pic-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+}
+.pic-item{
+    border:1px solid #5e5e5e;
+    width: 200px;
+    height:200px;
+    text-align: center;
+    margin:2em;
+
+}
+.pic-item p{
+    margin: 10px 0;
+}
+.pic-item img{
+    vertical-align:middle
+ }
+
+.list-none-style{
+    list-style: none;
+}
+.text-strong{
+    font-weight: bold;
+}
+
+table{
+    display: inline-table;
+    width:100%;
+    border-collapse:collapse;
+    border:1px solid #ddd;
+    padding: 3px;
+}
+thead{
+    display: table-header-group;
+    border-color: inherit;
+    vertical-align: middle;
+}
+table th{
+    border:1px solid #ddd;
+    background-color: #2d3e4d;
+    color: #fff;
+}
+table tr{
+    background-color: #fff;
+    border-top:1px solid #ccc;
+}
+table td{
+    border: 1px solid #ddd;
+    padding: 6px 13px;
+}
+table tr.total{
+    background-color: #d4d4d4;
+    font-weight: bold;
+}
+.left-side {
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 80%;
+    margin-right: 10px;
+}
+.right-side {
+    position: absolute;
+    background-color: #ffffff;
+    right: 0;
+    margin-top:30px;
+    width: 20%;
+    padding: 5px 10px;
+
+    border-top: 1px solid #e3e3e3;
+    border-left: 1px solid #e3e3e3;
+    border-right: 3px solid #5e5e5e;
+    border-bottom: 3px solid #5e5e5e;
+}
+.sidebar-title{
+    font-size:18px;
+    border-left:3px solid #ddd;
+    padding-left:10px;
+    height:40px;
+    line-height:40px;
+}
+
+.form-content{
+    text-align: center;
+    width: 100%;
+}
+.col-4{
+    float: left;
+    width:40%;
+}
+.col-6{
+    float: left;
+    width:60%;
+}
+.col-12{
+    width:100%;
+}
+.pull-right{
+    text-align: right;
+}
+.pull-left{
+    text-align: left;
+}
+.form-control{
+    display: inline-block;
+}
+.row{
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+}
+.row:before{
+    display: table;
+    content: " ";
+}
+.row:after{
+    display: table;
+    content: " ";
+     clear:both;
+}
+.form-info{
+    color:#999;
+}
+.btn{
+    padding:8px 13px;
+    background-color: #00a0e9;
+    color:#fff;
+    border-radius: 10px;
+    border:none;
+}
+
+footer {
+    color:#fff;
+    background-color: #333;
+    height:240px;
+    text-align: center;
+    padding: 10px;
+}
