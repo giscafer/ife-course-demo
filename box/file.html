@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝搜索框</title>
+    <style>
+        @font-face {
+            font-family: iconfont;
+            src: url('http://g.tbcdn.cn/tb/icon-font/1.1.5/iconfont.eot');
+        }
+        body{
+            font-size: 12px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .search-button{
+            float: right;
+        }
+        .search-tips{
+            height: 45px;
+            float: right;
+            margin-top: 4px;
+        }
+        .search-tips a{
+            color: gray;
+        }
+        .btn-search{
+            background:url("../image/right60.png");
+            background-color: gray;
+            width: 100px;
+            height: 45px;
+            background-position: 55px -200px;
+            border: 0;
+            cursor: pointer;
+        }
+        .search-common-panel{
+            height: 39px;
+            background-color: #f50;
+            overflow: hidden;
+            padding:3px 0 3px 77px;
+
+        }
+        .search-common-panel input{
+            padding: 0;
+            height: 39px;
+            line-height: 39px;
+            width:100%;
+            border:none;
+            outline:0;
+            background-color: #fff;
+            font-size: 15px;
+        }
+        .search-container{
+            position: relative;
+        }
+
+        .iconfont{
+            font-family:iconfont;
+            font-size:12px;
+            font-style: normal;
+            position: absolute;
+            top: 14px;
+            left: 86px;
+        }
+        ul{
+            list-style: none;
+            display: block;
+        }
+        ul,li{
+            margin: 0;
+            padding: 0;
+        }
+        .search-list{
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 73px;
+            height: 39px;
+            overflow: hidden;
+            background-color: #fff;
+            border-left: 1px solid #f6f6f6;
+            border-right: 1px solid #5e5e5e;
+        }
+        .search-list li{
+            display: block;
+            height: 39px;
+            line-height:39px;
+            text-align: center;
+        }
+        .selected{
+            background-color: #f6f6f6;
+        }
+        .trigger-hover{
+            overflow: visible;
+        }
+    </style>
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#tab_1').on(
+                    {
+                        'mouseover': function () {
+                            $('#search-tab').addClass('trigger-hover');
+                            $('#tab_1').addClass('selected')
+                        },
+                        'mouseout': function () {
+                            $('#tab_1').removeClass('selected');
+                        },
+                        'click':function(){
+                            $('#search-tab').removeClass('trigger-hover');
+                        }
+                    })
+            $('#tab_2').on(
+                    {
+                        'mouseover': function () {
+                            $('#tab_2').addClass('selected')
+                        },
+                        'mouseout': function () {
+                            $('#tab_2').removeClass('selected')
+                        }
+                    })
+//            $('#search-tab').on(
+//                    {
+//
+//                        'mouseout': function () {
+//                            $('#ul1').removeClass('trigger-hover');
+//                        }
+//                    })
+        })
+
+
+    </script>
+</head>
+<body>
+    <div class="search-container">
+        <div class="search-list" id="search-tab">
+            <ul id="ul1">
+                <li id="tab_1" class="selected"><a href="#">宝贝</a></li>
+                <li id="tab_2"><a href="#">店铺</a></li>
+            </ul>
+        </div>
+        <div class="search-pannel">
+            <form action="">
+                <div class="search-tips">
+                    <a href="#">
+                    高级<br>搜索
+                </a>
+                </div>
+                <div class="search-button"><button type="submit" class="btn-search"></button></div>
+                <div class="search-common-panel">
+                    <input type="text" x-webkit-speech="">
+                    <i class="iconfont">ő</i>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
